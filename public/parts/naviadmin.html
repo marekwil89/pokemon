@@ -1,0 +1,30 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+		<a class="navbar-brand" href="#/"><p class="logo">PokeShop - Admin</p></a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+		<li ng-class="{active : isActive('/signout')}" ng-show="authenticated"><a href="#/products" ng-click="signout()"><i class="fa fa-power-off"></i> Logout</a></li>
+		<li ng-class="{active : isActive('/login')}" ng-hide="authenticated"><a href="#/login"><i class="fa fa-sign-in"></i> Login</a></li>
+		<li class="hidden-xs" ng-show="authenticated"><p class="navbar-nav navbar-text">loged as {{current_user}} </p></li>
+		<li class="visible-xs" ng-show="authenticated"><p class="navbar-nav navbar-text">{{current_user}} </p></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+		<li ng-class="{active : isActive('/mainPage')}"><a href="#/mainPage"><i class="fa fa-home"></i> Main page</a></li>
+    <li ng-class="{active : isActive('/promoList')}"><a href="#/promoList"><i class="fa fa-users"></i> Promotion</a></li>
+		<li ng-class="{active : isActive('/usersList')}"><a href="#/usersList"><i class="fa fa-users"></i> User list</a></li>
+		<li ng-class="{active : isActive('/ordersList')}"><a href="#/ordersList"><i class="fa fa-deviantart"></i> Order list</a></li>
+		<li ng-class="{active : isActive('/productAdd')}"><a href="#/productAdd"><i class="fa fa-plus"></i> Add Product</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

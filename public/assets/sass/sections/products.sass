@@ -1,0 +1,94 @@
+.products-box
+	min-height: 95vh
+	
+	.header
+		text-align: center
+		font-size: 40px
+		font-weight: 700
+		color: darken($light-gray, 50%)
+
+	.sort-box
+		display: flex
+		justify-content: center
+		align-items: center
+		min-height: 20vh
+		flex-wrap: wrap
+
+
+
+	.items-box
+		box-sizing: border-box
+		
+		figure
+			box-sizing: border-box
+			position: relative
+			border-radius: 20px
+			transition: 1s all
+			color: $white-color
+			margin-bottom: 100px
+
+			img
+				width: 100%
+			
+			.price
+				border: 1px solid $black
+				z-index: 2
+				border-radius: 50%
+				padding: 7px
+				position: absolute
+				color: $white-color
+				
+				&.standard
+					background-color: $main-color
+					transform: rotate(15deg)
+					top: -15px
+					right: -15px
+					font-size: 35px
+
+				&.line
+					background-color: rgba($sec-color, 0.4)
+					text-decoration: line-through
+
+				&.new
+					background-color: $main-color
+					transform: rotate(20deg)
+					top: 15px
+					right: 10px
+					font-size: 45px
+
+			figcaption
+				font-size: 25px
+				font-weight: 700
+				text-align: center
+				color: darken($light-gray, 50%)
+
+			&:hover
+				background-color: $light-gray
+
+@media screen and (max-width: 1219px)
+	.products-box
+		.items-box
+			figure
+				.price
+					&.standard
+						right: 0px
+
+@media screen and (max-width: 998px) 
+	.products-box
+		margin-top: 100px
+
+@media screen and (max-width: 765px)
+	.products-box
+		margin-top: 50px
+		.items-box
+			margin-top: 50px
+			figure
+				.price
+				
+					&.standard
+						top: 0px
+						right: 15px	
+
+					&.new
+						top: 35px
+						right: 25px

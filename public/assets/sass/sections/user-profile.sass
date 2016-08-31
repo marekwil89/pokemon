@@ -1,0 +1,107 @@
+.user-box
+	min-height: 95vh
+
+	.header
+		margin-top: 40px
+		text-align: center
+		font-size: 40px
+		font-weight: 700
+		color: darken($light-gray, 50%)
+
+	.user-profile
+		border-radius: 10px
+		border: 1px solid $light-gray
+		background-color: lighten($dark-white, 15%)
+		padding: 10px
+		width: 100%
+		min-height: 200px
+		position: relative
+		overflow: hidden
+		margin-bottom: 20px
+
+		.pikachu-img
+			background-image: url('../img/pikachu.png')
+			background-size: 400px 400px
+			position: absolute
+			right: -150px
+			top: -60px
+			width: 400px
+			height: 400px
+
+		.pokeball-img
+			z-index: 1024
+			background-image: url('../img/pokeball.png')
+			background-size: 400px 400px
+			position: absolute
+			right: -100px
+			bottom: -60px
+			width: 400px
+			height: 400px
+
+
+		.details-head
+			font-size: 20px
+			font-weight: 700
+
+			small
+				font-weight: 300
+				font-size: 20px
+
+		.details-box
+			min-height: 35vh
+
+			li
+				margin: 20px 0px
+				font-size: 18px
+
+				input
+					padding: 7px
+					width: 70%
+					border: 2px solid darken($light-gray, 50%)
+					background-color: $light-gray
+					transition: 0.3s all
+					color: darken($light-gray, 50%)
+					margin-bottom: 20px
+					box-sizing: border-box
+					border-radius: 5px
+					font-size: 20px
+
+					&:focus
+						border: 2px solid $main-color
+
+@media screen and (max-width: 998px) 
+	.user-box
+		margin-top: 100px
+
+		.user-profile
+
+			.pikachu-img
+				background-size: 300px 300px
+				width: 300px
+				height: 300px
+
+			.pokeball-img
+				background-size: 300px 300px
+				width: 300px
+				height: 300px
+
+
+
+			
+@media screen and (max-width: 765px)
+	.user-box
+		margin-top: 50px
+
+		.user-profile
+			.pikachu-img
+				display: none
+
+			.pokeball-img
+				display: none
+
+			.details-box
+				padding: 0
+				li
+					input
+						width: 100%
+

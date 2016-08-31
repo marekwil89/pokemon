@@ -1,0 +1,48 @@
+nav
+  &.navbar-default 
+    .navbar-text
+      color: $white-color
+    .navbar-header 
+      a
+        text-shadow: none
+       
+        .logo 
+          font-size: 30px
+          span
+            font-size: 30px
+            color: $main-color
+  &#custom-bootstrap-menu.navbar-default  
+    border: none
+    font-size: 13px
+    background: $muted-gray
+    border-width: 0
+    border-radius: 0
+    .navbar-brand 
+      color: $white-color
+    .navbar-nav 
+      li
+        line-height: 20px
+        transition: 0.3s all
+        a
+          color: $white-color
+
+        &:hover
+          background-color: #fffffe
+          a,p
+            color: $black
+
+        &.active
+          background-color: #fffffe
+          a
+
+            color: $black
+
+        &.full
+          background-color: $main-color
+          border-radius: 5px
+          a
+            i
+              color: $white-color
+
+            span
+              color: $white-color

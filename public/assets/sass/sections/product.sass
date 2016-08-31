@@ -1,0 +1,109 @@
+.product-box
+
+	.item-box
+		padding-top: 50px
+		box-sizing: border-box
+		min-height: 80vh
+
+		figure
+			padding: 0
+
+			img
+				width: 100%
+
+			.price
+				border: 1px solid $black
+				z-index: 2
+				border-radius: 50%
+				padding: 7px
+				position: absolute
+				color: $white-color
+				
+				&.standard
+					background-color: $main-color
+					transform: rotate(15deg)
+					top: 15px
+					right: 15px
+					font-size: 45px
+
+				&.line
+					background-color: rgba($sec-color, 0.4)
+					text-decoration: line-through
+
+				&.new
+					background-color: $main-color
+					transform: rotate(20deg)
+					top: 50px
+					right: 50px
+					font-size: 55px
+
+
+		article
+
+			h2
+				text-align: center
+				font-size: 40px
+				font-weight: 700
+				color: darken($light-gray, 50%)
+
+			p
+				font-size: 20px
+
+
+			textarea
+				border: 2px solid darken($light-gray, 50%)
+				background-color: $light-gray
+				transition: 0.3s all
+				min-height: 200px
+				color: darken($light-gray, 50%)
+				margin-bottom: 20px
+				box-sizing: border-box
+				border-radius: 25px
+				padding: 15px
+				font-size: 20px
+				resize: none
+
+				&:focus
+					border: 2px solid $main-color
+
+			.desc
+				border-top: 1px solid $light-gray
+				padding-top: 20px
+				color: darken($light-gray, 50%)
+				text-align: justify
+				min-height: 200px
+				border-bottom: 1px solid $light-gray
+
+
+
+	.comments-box
+		min-height: 40vh
+
+		h2
+			text-align: center
+			font-size: 40px
+			font-weight: 700
+			color: darken($light-gray, 50%)
+			margin-bottom: 40px
+
+		.comment
+			border-radius: 10px
+			border: 1px solid $dark-white
+			background-color: lighten($dark-white, 15%)
+			padding: 10px
+			width: 100%
+			min-height: 200px
+			margin-bottom: 50px
+
+			.comment-head
+				font-size: 20px
+				font-weight: 700
+
+				small
+					font-weight: 300
+					font-size: 20px
+
+			p
+				font-size: 20px
+
+					

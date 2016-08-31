@@ -1,0 +1,45 @@
+<section class="user-box container">
+	
+	<h2 class="header">My profile</h2>
+
+	<div ng-if="errors" class="alert alert-danger">{{errors}}</div>
+	
+	<div ng-if="!errors" class="user-profile">
+		
+		<span class="pikachu-img"></span>
+		<span class="pokeball-img"></span>
+
+		<h4 class="details-head">User: <small>{{myProfile.username}}</small> created at <small>{{myProfile.created_at | date: 'fullDate'}}</small></h4>
+		
+		<hr>
+
+		<h4>Deliver adress</h4>
+		<ul class="details-box">
+			<li>
+				<p>Detail: {{myProfile.adress.detail}}</p>
+				<input ng-if="change == true" type="text" placeholder="Ul. Wspólna 55/1" ng-model="myProfile.adress.detail">
+			</li> 
+			<li>
+				<p>City: {{myProfile.adress.city}}</p>
+				<input ng-if="change == true" type="text" placeholder="Warszawa" ng-model="myProfile.adress.city">
+			</li>
+			<li>
+				<p>Postal code: {{myProfile.adress.zip}}</p>
+				<input ng-if="change == true" type="text" placeholder="05-075" ng-model="myProfile.adress.zip">
+			</li>
+			<li>
+				<p>Telephone: {{myProfile.adress.phone}}</p>
+				<input ng-if="change == true" type="text" placeholder="555-555-555" ng-model="myProfile.adress.phone">
+			</li>
+		</ul>
+		<div ng-if="success" class="alert alert-success" role="alert">{{success}}</div>
+		<div ng-if="validError" class="alert alert-danger" role="alert">{{validError}}</div>
+
+		<button class="button add" ng-click="changeAdress()">Change</button>
+		<button ng-if="change == true" class="button delete" ng-click="updateAdress()">Accept</button>
+	</div>
+
+</section>
+
+
+

@@ -1,0 +1,77 @@
+<html>
+	<head>
+	
+
+	    <meta charset="UTF-8">
+	    <meta http-equiv="Content-Type" content="text/html, charset=utf-8" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	    <title>Shop</title>
+
+	    <!-- style css and font -->
+	    <link rel="stylesheet" href="assets/css/style.css">
+		<link href='https://fonts.googleapis.com/css?family=Patrick+Hand+SC&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet"> 
+
+	</head>
+
+
+
+	<body ng-app="app">
+		
+		
+		<naviadmin ng-if="admin == true"></naviadmin>
+		<naviuser ng-if="admin == false"></naviuser>
+
+		<main class="angular-animate" ng-view></main>
+		<footer></footer>
+
+		
+
+		
+		<link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.min.css">
+	    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+		
+
+
+		<script src="bower_components/angular/angular.min.js"></script>
+		<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<!-- 		// <script src="http://code.angularjs.org/1.4.9/i18n/angular-locale_en-en.js"></script> -->
+		<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+		<script src="bower_components/angular-route/angular-route.min.js"></script>
+		<script src="bower_components/angular-i18n/angular-locale_en.js"></script>
+  		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/a0-angular-storage/dist/angular-storage.js"></script>
+		<script src="bower_components/underscore/underscore.js"></script>
+		<script src="bower_components/angular-underscore-module/angular-underscore-module.js"></script>
+		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- 		app components -->
+		
+		<script src="javascripts/app.js"></script>
+		
+		<script src="javascripts/ctrl/userProfileCtrl.js"></script>
+		<script src="javascripts/ctrl/navigation.js"></script>
+		<script src="javascripts/ctrl/productsCtrl.js"></script>
+		<script src="javascripts/ctrl/productCtrl.js"></script>
+		<script src="javascripts/ctrl/userListCtrl.js"></script>
+		<script src="javascripts/ctrl/cartCtrl.js"></script>
+		<script src="javascripts/ctrl/ordersListCtrl.js"></script>
+		<script src="javascripts/ctrl/myOrdersCtrl.js"></script>
+		<script src="javascripts/ctrl/authController.js"></script>
+		<script src="javascripts/ctrl/mainPageCtrl.js"></script>
+		<script src="javascripts/ctrl/promoListCtrl.js"></script>
+
+		<script src="javascripts/services.js"></script>
+		<script src="javascripts/directives.js"></script>
+		<script src="javascripts/custom.js"></script>
+
+
+
+		
+		
+
+	</body>
+</html>

@@ -1,0 +1,28 @@
+
+
+<section class="container wrapper">
+
+	<div ng-if="errors" class="alert alert-danger" role="alert">{{errors}}</div>
+
+	<div class="row">
+		<div ng-repeat="user in users" class="col-md-6">
+			<div class="well">
+				<h3><strong>User:</strong> {{user.username}}</h3>
+				<hr>
+				<ul>
+					<li><strong>Detail:</strong>  {{user.adress.detail}}</li>
+					<li><strong>City:</strong> {{user.adress.city}}</li>
+					<li><strong>Postal Code:</strong>{{user.adress.zip}}</li>
+					<li><strong>Phone</strong> {{user.adress.phone}}</li>
+				</ul>
+
+				<hr>
+				<div class="panel">
+					<h5 class="pull-right"><strong>Joined:</strong> {{user.created_at | date: 'fullDate'}}</h5>
+					<h5><strong>Admin:</strong> {{user.admin}}</h5>
+				</div>
+			</div>
+		</div>		
+	</div>
+
+</section>

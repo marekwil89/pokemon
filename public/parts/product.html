@@ -1,0 +1,54 @@
+<section class="container product-box">
+	<div class="row item-box">
+		<figure class="col-md-7">
+			<img ng-src="../assets/img/{{product.foto}}.png" alt="">
+			<span ng-class="checkNewPrice(product.promotion)">{{product.price | currency : "€ ": 0}}</span>
+			<span class="price new" ng-if="product.promotion != 0">{{product.price - product.promotion | currency : "€ " : 0}}</span>
+		</figure>
+		<article class="col-md-5">
+			<uib-tabset class="tabset tab-box" justified="true">
+
+				<uib-tab heading="Description">
+					<h2>{{product.name}}</h2>
+					<p ><strong>Type:</strong>  {{product.type.name}} <i class="{{product.type.icon}}"></i></p>
+					<p class="desc"><strong>Description:</strong> {{product.desc}}</p>
+					<button ng-click="addToCart(product)" class="button long add">Add to Cart</button>
+				</uib-tab>
+				<uib-tab class="tab" heading="Comment">
+					<h2>Your comment</h2>
+					<br>
+					<form ng-submit="sendComment()" novalidate>
+						<textarea ng-model="comment.text" class="form-control" placeholder="example text..."></textarea>
+
+						<div ng-if="error && !success" class="alert alert-danger" role="alert">{{error}}</div>
+						<div ng-if="success" class="alert alert-success" role="alert">{{success}}</div>
+
+						<button class="button long add" type="submit">ADD</button>
+					</form>							
+
+				</uib-tab>
+			</uib-tabset>			
+		</article>
+	</div>
+
+	<hr>
+	
+	<div class="row comments-box">
+		<div class="col-md-12">
+			<h2>Comments</h2>
+
+			<div ng-if="product.comments == 0" class="alert alert-danger" role="alert">No one has commented {{product.name}}</div>
+
+			<div class="comment" ng-repeat="comment in product.comments">
+				
+				<h4 class="comment-head">Napisał/a: <small>{{comment.username}}</small> w dniu: <small> {{comment.created_at | date:'fullDate'}}</small></h4>
+				<hr>
+				<p>{{comment.text}}</p>	
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+

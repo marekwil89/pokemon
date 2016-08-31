@@ -1,0 +1,40 @@
+<section class="my-orders container">
+
+	<h2 class="header">My Orders</h2>
+
+	<div ng-if="errors" class="alert alert-danger" role="alert">{{errors}}</div>
+	
+	<div ng-if="myOrders.length == 0 && !errors" class="alert alert-danger" role="alert">Empty</div>
+
+	
+	<article ng-repeat="order in myOrders" class="well-box">
+		<h4>Order created at <small>{{order.created_at | date: 'fullDate'}}</small></h4>
+		<span class="order-status">{{order.status}}</span>
+		<div class="table-responsive">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Qty</th>
+						<th>Price</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="item in order.items">
+						<td>{{item.name}}</td>
+						<td>{{item.qty}}</td>
+						<td>{{item.qty * (item.price - item.promotion) | currency : "€ " : 0}}</td>
+						<tr>
+							<td colspan="2"></td>
+							<td><strong>{{totalPrice($index) | currency : "€ " : 0}}</strong></td>
+						</tr>
+						
+					</tr>
+				</tbody>
+			</table>
+		</div>	
+	</article>
+
+	<span class="jenny"></span>
+
+</section>

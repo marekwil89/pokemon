@@ -1,0 +1,125 @@
+//pulse animation
+
+@keyframes pulse
+  0%
+    transform: scale3d(1, 1, 1)
+
+  50%
+    transform: scale3d(1.2, 1.2, 1.2)
+
+  100%
+    transform: scale3d(1, 1, 1)
+
+
+
+.pulse
+  z-index: 99
+  animation-name: pulse
+  animation-duration: 0.5s
+  animation-fill-mode: both
+  // animation-iteration-count: infinite
+  transition-timing-function: ease-in-out
+
+
+//bloom bubble on prof oak section
+
+@keyframes bloom
+  0%
+    opacity: 0
+  
+  25%
+    opacity: 1
+    transform: scale3d(1, 1, 1)
+  40%
+    opacity: 1
+    transform: scale3d(1.05, 1.05, 1.05)
+  60%
+    opacity: 1
+    transform: scale3d(0.95, 0.95, 0.95)
+  80%
+    opacity: 1
+    transform: scale3d(1.01, 1.01, 1.01)  
+  100%
+    opacity: 1
+    transform: scale3d(1, 1, 1)
+
+.bloom 
+  animation-name: bloom
+  animation-duration: 3s
+  animation-fill-mode: forwards
+  transition-timing-function: ease-in-out
+
+
+//typeing animation
+
+@keyframes type
+  from 
+    width: 0 
+
+.type
+  animation: type 4s steps(60, end)
+
+
+//light speed in animation
+
+@keyframes lightSpeedIn
+  from
+    transform: translate3d(100%, 0, 0) skewX(-30deg)
+    opacity: 0
+
+  60%
+    transform: skewX(20deg)
+    opacity: 1
+
+  80%
+    transform: skewX(-5deg)
+    opacity: 1
+
+  to
+    transform: none
+    opacity: 1
+
+//light speed out animation
+
+@keyframes lightSpeedOut
+  from
+    opacity: 1
+
+  to
+    transform: translate3d(100%, 0, 0) skewX(30deg)
+    opacity: 0
+
+
+
+//show animation
+@keyframes enter
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes leave
+  0%
+    opacity: 1
+  100%
+    opacity: 0
+
+figure.ng-enter
+  animation-name: lightSpeedIn
+  animation-duration: 0.5s
+  transition-timing-function: ease-out
+
+figure.ng-leave
+  animation-name: lightSpeedOut
+  animation-duration: 1s
+  transition-timing-function: ease-in
+
+main.ng-enter
+  animation-name: enter
+  animation-duration: 0.8s
+  transition-timing-function: ease
+
+main.ng-leave
+  animation-name: leave
+  animation-duration: 0.2s
+  transition-timing-function: ease

@@ -1,0 +1,71 @@
+.my-orders
+	min-height: 95vh
+	border: 1px solid $dark-white
+	overflow: hidden
+	position: relative
+
+	.jenny
+		z-index: 1
+		background-image: url('../img/jenny.png')
+		position: absolute
+		bottom: -120px
+		left: 0
+		height: 60vh
+		background-size: 100% 100%
+		background-repeat: no-repeat
+		min-width: 40%
+		transition: 1s all
+
+	.header
+		text-align: center
+		font-size: 40px
+		font-weight: 700
+		margin-bottom: 40px
+		color: darken($light-gray, 50%)
+
+	.well-box
+		z-index: 2
+		position: relative
+		border-radius: 10px
+		border: 1px solid $dark-white
+		background-color: rgba(lighten($dark-white, 15%), 0.95) 
+		padding: 10px
+		width: 100%
+		min-height: 200px
+		margin-bottom: 20px
+
+		.order-status
+			color: $white-color
+			z-index: 3
+			font-size: 35px
+			position: absolute
+			top: -15px
+			right: -15px
+			background-color: $main-color
+			border-radius: 50%
+			padding: 7px 20px
+			transform: rotate(15deg)
+
+
+
+@media screen and (max-width: 998px) 
+	.my-orders
+		margin-top: 100px
+			
+@media screen and (max-width: 765px)
+	.my-orders
+		margin-top: 50px
+
+		.jenny
+			display: none
+
+		.well-box
+
+			.order-status
+				font-size: 20px
+				padding: 5px 10px
+				transform: rotate(0deg)
+				top: -20px
+				right: 0px
+
+

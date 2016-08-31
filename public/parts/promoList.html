@@ -1,0 +1,14 @@
+<section class="container wrapper">
+	<div ng-repeat="product in products" class="well">
+		<h1>{{product.name}}</h1>
+		<hr>
+
+		<h3>Standard price {{product.price | currency : "€ " : 0}}</h3>
+		<form ng-submit="updatePromotions(product._id, product.promotion)">
+			lower price at<input type="number" ng-model="product.promotion"> €
+			<button class="btn btn-default pull-right" type="submit">Save Promotion</button>
+		</form>
+		<h3>new price {{product.price - product.promotion | currency : "€ " : 0}}</h3>
+	</div>
+
+</section>

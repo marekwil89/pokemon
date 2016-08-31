@@ -1,0 +1,39 @@
+.form-box
+	display: flex
+	align-items: center
+	justify-content: center
+	min-height: 95vh
+
+	.form-well
+		width: 600px
+		border-radius: 10px
+		border: 1px solid $dark-white
+		background-color: lighten($dark-white, 15%)
+		padding: 10px
+		min-height: 40vh
+		margin: 0px, 100px
+
+		.header
+			text-align: center
+			font-size: 40px
+			font-weight: 700
+			color: darken($light-gray, 50%)
+			margin-bottom: 50px
+
+		input, select, textarea
+			border: 2px solid darken($light-gray, 10%)
+			width: 100%
+			padding: 7px
+			background-color: $light-gray
+			transition: 0.3s all
+			color: $black
+			margin-bottom: 40px
+			box-sizing: border-box
+			border-radius: 5px
+			font-size: 20px
+
+			&:focus
+				border: 2px solid $main-color
+
+			&:active
+				outline: none

@@ -1,0 +1,424 @@
+//slider section
+
+.header-box
+	width: 100%
+	overflow: hidden
+	position: relative
+
+	.slides-box
+		width: 400%
+		transition: 1s all
+	.main-slide
+		min-height: 95vh
+		box-sizing: border-box
+		float: left
+		width: 25%
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: bottom 
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: column
+		position: relative
+
+		&.image1
+			background-image: url('../img/water.jpg')
+
+		&.image2
+			background-image: url('../img/fire.jpg')
+
+		&.image3
+			background-image: url('../img/grass.jpg')
+
+		.poke
+			background-size: 500px 500px
+			position: absolute
+			width: 500px
+			height: 500px
+			bottom: -70px
+			left: 0
+
+			&.squirtle
+				background-image: url('../img/squirtle.png')
+			&.charmander
+				background-image: url('../img/charmander.png')
+			&.bulbasaur
+				background-image: url('../img/bulbasaur.png')
+
+		h1
+			z-index: 1
+			color: $white-color
+			font-weight: 700
+			text-align: center
+			text-transform: uppercase
+			font-size: 65px
+			padding: 20px 15px
+			border: 10px solid $white-color
+			border-radius: 25px
+
+		p
+			z-index: 1
+			color: $white-color
+			margin: 40px 0px
+			text-align: justify
+			width: 500px
+			font-size: 20px
+    
+	.buyer-slide
+		background-color: rgba(lighten($muted-gray, 5%), 0.9)
+		min-height: 60vh
+		box-sizing: border-box
+		float: left
+		width: 25%
+		display: flex
+		justify-content: center
+		align-items: center
+		position: relative
+		overflow: hidden
+		flex-direction: column
+
+		img
+			margin: 20px auto
+			background-color: darken($white-color, 10%)
+			border-radius: 50%
+			border: 4px solid lighten($main-color, 10%)
+			width: 300px
+			height: 300px
+			margin-bottom: 10px
+
+		blockquote
+			border-left: 4px solid lighten($main-color, 10%)
+			.quote
+				color: $white-color
+				font-weight: 700
+				letter-spacing: 2.5px
+				font-size: 30px
+
+			small
+				color: lighten($main-color, 10%)
+				font-weight: 300
+				font-size: 20px
+
+//profesor oak quate
+
+.profesor-box
+	background-image: url('../img/lab.jpg')
+	background-attachment: fixed
+	width: 100%
+	min-height: 80vh
+	position: relative
+	display: flex
+	justify-content: center
+	align-items: center
+	overflow: hidden
+
+	.overlay
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		top: 0
+		background: rgba(darken($light-gray, 20%), 0.8)
+
+	.oak-img
+		position: absolute
+		background-repeat: no-repeat
+		background-image: url('../img/oak.png')
+		background-size: cover
+		background-position: bottom
+		height: 80vh
+		width: 900px
+		bottom: 0
+		right: -850px
+		transition: all 2s
+		z-index: 2
+
+		&.appear
+			right: 0
+
+	.bubble
+		z-index: 99
+		opacity: 0
+		position: relative
+		border-radius: 25px
+		z-index: 99
+		width: 600px
+		background-color: rgba($muted-gray, 0.8) 
+
+		&:after
+			z-index: 99
+			position: absolute
+			border-style: solid
+			border-width: 8px 0 35px 45px
+			border-color: transparent rgba($muted-gray, 0.8) 
+			content: ''
+			right: -45px
+			top: 40px
+			display: block
+
+		blockquote
+			border-left: 4px solid $main-color
+			font-style: italic
+			margin: 2em 15px
+			padding: 0.5em 15px
+			color: $white-color
+
+			.quote
+				font-weight: 700
+				letter-spacing: 2.5px
+				font-size: 29px
+				width: 30em
+				overflow: hidden
+				white-space: nowrap
+
+				&:before
+					font-weight: 300
+					color: $main-color
+					content: "\201C"
+					font-size: 50px
+					line-height: 0.1em
+					margin-right: 0.2em
+					vertical-align: -.4em
+
+				&:after
+					font-weight: 300
+					color: $main-color
+					content: "\201D"
+					font-size: 50px
+					line-height: 0.1em
+					vertical-align: -.45em
+
+			&:first-child
+				display: inline-block
+
+			small
+				font-weight: 300
+				font-size: 20px
+				color: $white-color
+
+
+
+//new Arrivals section
+
+.items
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	min-height: 90vh
+
+	h2
+		margin-bottom: 40px
+		color: darken($light-gray, 50%)
+
+	.items-box
+		display: flex
+		justify-content: center
+		align-items: center		
+		flex-wrap: wrap
+
+		figure
+			box-sizing: border-box
+			position: relative
+			margin-right: 60px
+			margin-bottom: 30px
+			border-radius: 20px
+			transition: 1s all
+			color: $white-color
+
+			img
+				width: 300px
+			
+			.price
+				border: 1px solid $black
+				z-index: 2
+				border-radius: 50%
+				padding: 7px
+				position: absolute
+				color: $white-color
+				
+				&.standard
+					background-color: $main-color
+					transform: rotate(15deg)
+					top: -15px
+					right: -15px
+					font-size: 35px
+
+				&.line
+					background-color: rgba($sec-color, 0.4)
+					text-decoration: line-through
+
+				&.new
+					background-color: $main-color
+					transform: rotate(20deg)
+					top: 15px
+					right: 10px
+					font-size: 45px
+
+			figcaption
+				font-size: 25px
+				font-weight: 700
+				text-align: center
+				color: darken($light-gray, 50%)
+
+			&:hover
+				background-color: $light-gray
+
+
+
+
+//about section with pokeball image
+
+.about-box
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-around
+	align-items: center
+	min-height: 90vh
+	box-sizing: border-box
+	overflow: hidden
+
+	.info-box
+		position: relative
+		right: -880px
+		opacity: 0
+		box-sizing: border-box
+		display: flex
+		align-items: center
+		flex-direction: column
+		width: 50%
+		color: darken($light-gray, 50%)
+		transition: all 1s
+
+		&.appear
+			opacity: 1
+			right: 0
+
+		h2
+			font-size: 40px
+			font-weight: 700
+			
+
+		p
+			text-align: justify
+			width: 500px
+			font-size: 20px
+
+
+	.info-img
+		width: 50%
+		background-image: url('../img/pokeballs.jpg')
+		height: 100vh
+		background-repeat: no-repeat
+		background-position: left
+		background-size: cover
+		border-radius: 0 30% 0 0
+
+@media screen and (max-width: 1895px)
+	.profesor-box
+		.oak-img
+			background-size: 500px 100%
+			width: 500px
+
+
+@media screen and (max-width: 1440px)
+	.header-box
+		.slide
+			.poke
+				background-size: 350px 350px
+				width: 350px
+				height: 350px
+
+	.profesor-box
+		.oak-img
+			display: none
+
+		.bubble
+			&:after
+				display: none
+
+@media screen and (max-width: 1079px)
+	.header-box
+		.main-slide
+			.poke
+				display: none
+
+			h1
+				font-size: 45px
+
+	.items
+		.items-box
+			figure
+				.price
+					font-size: 25px
+					top: 15px
+					right: 15px
+
+	.about-box
+		.info-box
+			width: 100%
+		.info-img
+			display: none
+
+
+
+@media screen and (max-width: 715px)
+	.header-box
+		.main-slide
+			h1
+				margin-right: 5px
+				margin-left: 5px
+				font-size: 30px
+				padding: 5px 5px
+				border: 10px solid $white-color
+
+			p
+				text-align: justify
+				font-size: 15px
+				width: 300px
+
+
+		.buyer-slide
+			blockquote
+				.quote
+					font-size: 25px
+
+	.profesor-box
+		background-color: red
+		.bubble
+			width: 95%
+			blockquote
+				.quote
+					font-size: 25px
+
+
+
+	.items
+		.items-box
+			figure
+				margin: 10px auto
+				padding: 0
+				width: 100%
+
+				.price
+
+					&.standard
+						top: 0px
+						right: 15px	
+
+					&.new
+						top: 35px
+						right: 25px
+
+				img
+					width: 100%
+					margin: 0 auto
+
+	.about-box
+		min-height: 60vh
+		.info-box
+			width: 100%
+			margin: 0 15px
+			p
+				width: 100%

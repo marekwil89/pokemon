@@ -1,0 +1,37 @@
+.cart-box
+	min-height: 95vh
+	border: 1px solid $dark-white
+	position: relative
+	overflow: hidden
+
+	.joy
+		z-index: 1
+		background-image: url('../img/joy.png')
+		position: absolute
+		bottom: 0
+		right: 0
+		height: 70vh
+		background-repeat: no-repeat
+		min-width: 70%
+
+	.header
+		text-align: center
+		font-size: 40px
+		font-weight: 700
+		margin-bottom: 50px
+		color: darken($light-gray, 50%)
+
+	.cart-well
+		position: relative
+		z-index: 2
+		border-radius: 10px
+		border: 1px solid $dark-white
+		background-color: rgba(lighten($dark-white, 15%), 0.95) 
+		padding: 10px
+		width: 100%
+		min-height: 200px
+
+@media screen and (max-width: 745px)
+	.cart-box
+		.joy
+			display: none 

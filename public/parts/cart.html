@@ -1,0 +1,43 @@
+<section class="container cart-box">
+	<h1 class="header">Cart</h1>
+	
+	<div ng-if="totalItems()== 0 && !success" class="alert alert-danger" role="alert">Your cart is empty</div>
+
+	<div ng-if="success" class="alert alert-success" role="alert">{{success}} check your order <a href="#/myOrders"><strong>here</strong></a></div>
+
+	<article ng-if="totalItems() > 0" class="cart-well">
+		<div class="table-responsive">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Price</th>
+						<th>Qty</th>
+						<th>all</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="item in cart">
+						<td>{{item.name}}</td>
+						<td>{{item.price - item.promotion}}</td>
+						<td>{{item.qty}}</td>
+						<td>{{item.qty * (item.price - item.promotion)}}</td>
+					</tr>
+					<tr>
+						<td colspan="3"></td>
+						<td><strong>{{totalPrice()}}</strong></td>
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
+		
+		<div ng-if="error" class="alert alert-danger" role="alert">{{error}}</div>
+
+		<button ng-click="emptyCart()" class="button add">Clear</button>
+		<button ng-click="newOrder()" class="button delete">Order</button>
+
+	</article>	
+
+	<span class="joy"></span>
+</section>

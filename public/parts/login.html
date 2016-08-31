@@ -1,0 +1,19 @@
+<section class="form-box">
+	<form class="form-well" ng-submit="login()">
+
+		<h2 class="header">Login</h2>
+		
+		<p style="color: red; text-align: center;">Try admin account : admin@admin.pl/////password123</p>
+
+		<label for="email">email*</label>
+		<input id="email" ng-model="user.username" type="text" placeholder="przykladowy@mail.com">
+
+		<label for="password">password*</label>
+		<input id="password" ng-model="user.password" type="password" placeholder="password123" >
+
+		<div ng-if="error_message" class="alert alert-danger" role="alert">{{error_message}}</div>
+
+		<button type="submit" class="button long add">Login</button>
+	</form>
+
+</section>
