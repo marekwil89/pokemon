@@ -1,5 +1,6 @@
 angular.module('userProfileModule', []).controller('userProfileCtrl', function($scope, $http, $rootScope){
 
+	$scope.change = false
 
 	var showProfile = function(){
 		$http.get('useCtrl/userProfile').success(function(data){
@@ -12,7 +13,7 @@ angular.module('userProfileModule', []).controller('userProfileCtrl', function($
 	showProfile()
 
 
-	$scope.change = false
+	
 
 	$scope.changeAdress = function(){
 

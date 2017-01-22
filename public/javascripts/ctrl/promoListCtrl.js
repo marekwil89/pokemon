@@ -10,8 +10,6 @@ angular.module('promoListModule', []).controller('promoListCtrl', function($scop
         });
     }
 
-    getProducts()
-
     $scope.updatePromotions = function(id, promo){
 
     	var product = {
@@ -27,5 +25,7 @@ angular.module('promoListModule', []).controller('promoListCtrl', function($scop
             $scope.error = data
         })
     }
+
+    getProducts()
 
 });

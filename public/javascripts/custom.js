@@ -1,20 +1,8 @@
 $(document).ready(function(){
 
-
-	
-	
 	var slide = 0
 
-	function changeSlide(){
-		slide = slide - 100;
-		if(slide === -300){
-			slide = 0;
-		}
-		$(".slides-box").css("margin-left", slide + '%');
-	}
-
 	setInterval(changeSlide, 5000);
-
 
 	$(window).scroll(function(){
 
@@ -28,13 +16,35 @@ $(document).ready(function(){
 			}
 
 
-			if(wScroll > $('.about-box').offset().top - ($(window).height()/10)){
-				$('.info-box').addClass('appear')
+			showItems(wScroll, '.arrivals', '.arr-item')
+			showItems(wScroll, '.promotions', '.promo-item')
+			showItems(wScroll, '.starters', '.start-item')
+			showItems(wScroll, '.about-box', '.info-box')
 
-			}
 		}
 	})
 
+	function changeSlide(){
+		slide = slide - 100;
+		if(slide === -300){
+			slide = 0;
+		}
+		$(".slides-box").css("margin-left", slide + '%');
+	}
+
+	function showItems(wScroll, box, item){
+		if(wScroll > $(box).offset().top - ($(window).height()/20)){
+			$(item).each(function(i){
+				setTimeout(function(){
+					$(item).eq(i).addClass('is-showing')
+				}, 300 * i)
+			})
+		}
+	}
 
 
 })
+
+
+
+

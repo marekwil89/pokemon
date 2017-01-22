@@ -1,6 +1,5 @@
 angular.module('authModule', []).controller('authController', function($scope, $http, $rootScope, $location){
 
-	// $scope.user = {username: 'ddddd@ddd.pl', password: 'ddddd'};
 	$scope.error_message = '';
 
 	$scope.login = function(){

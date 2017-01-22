@@ -19,10 +19,10 @@
 	</div>
 </header>
 
-<section class="items">
+<section class="items arrivals">
 	<h2>New Arrivals</h2>
 	<div class="items-box">
-		<figure ng-repeat="arrival in lastArrivals">
+		<figure class="arr-item" ng-repeat="arrival in lastArrivals">
 			<a href="#/products/{{arrival._id}}"><img ng-src="../assets/img/{{arrival.foto}}.png"></a>
 			<span ng-class="checkNewPrice(arrival)">{{arrival.price | currency : "€ ": 0}}</span>
 			<span class="price new" ng-if="arrival.promotion != 0">{{arrival.price - arrival.promotion | currency : "€ " : 0}}</span>
@@ -44,10 +44,10 @@
 </section>
 
 
-<section class="items">
+<section class="items promotions">
 	<h2>Best Promotions</h2>
 	<div class="items-box">
-		<figure ng-repeat="promo in promotions">
+		<figure class="promo-item" ng-repeat="promo in promotions">
 			<a href="#/products/{{promo._id}}"><img ng-src="../assets/img/{{promo.foto}}.png"></a>
 			<span ng-class="checkNewPrice(promo)">{{promo.price | currency : "€ ": 0}}</span>
 			<span class="price new" ng-if="promo.promotion != 0">{{promo.price - promo.promotion | currency : "€ " : 0}}</span>
@@ -62,21 +62,21 @@
 		<article class="buyer-slide">
 			<img src="assets/img/trainer1.png" alt="">
 			<blockquote>
-				<p class="quote"><i class="fa fa-quote-left" aria-hidden="true"></i> Best job in world Pokeshop.pl <i class="fa fa-quote-right" aria-hidden="true"></i></p>
+				<p><i class="fa fa-quote-left" aria-hidden="true"></i> Best job in world Pokeshop.pl <i class="fa fa-quote-right" aria-hidden="true"></i></p>
 				<small>Jon Beway</small>
 			</blockquote>
 		</article>
 		<article class="buyer-slide">
 			<img src="assets/img/trainer2.png" alt="">
 			<blockquote>
-				<p class="quote"><i class="fa fa-quote-left" aria-hidden="true"></i> This shop is perl <i class="fa fa-quote-right" aria-hidden="true"></i></p>
+				<p><i class="fa fa-quote-left" aria-hidden="true"></i> This shop is perl <i class="fa fa-quote-right" aria-hidden="true"></i></p>
 				<small>Carl Jamison</small>
 			</blockquote>	
 		</article>
 		<article class="buyer-slide">
 			<img src="assets/img/trainer3.png" alt="">
 			<blockquote>
-				<p class="quote"><i class="fa fa-quote-left" aria-hidden="true"></i> My new Pikachu is so sweet <i class="fa fa-quote-right" aria-hidden="true"></i></p>
+				<p><i class="fa fa-quote-left" aria-hidden="true"></i> My new Pikachu is so sweet <i class="fa fa-quote-right" aria-hidden="true"></i></p>
 				<small>Christina Saul</small>
 			</blockquote>			
 		</article>
@@ -84,10 +84,10 @@
 </section>
 
 
-<section ng-if="starters" class="items">
+<section class="items starters">
 	<h2>Movie starters</h2>
 	<div class="items-box">
-		<figure ng-repeat="starter in starters">
+		<figure class="start-item" ng-repeat="starter in starters">
 			<a href="#/products/{{starter._id}}"><img 
 ng-src="../assets/img/{{starter.foto}}.png"></a>
 			<span ng-class="checkNewPrice(starter)">{{starter.price | currency : "€ ": 0}}</span>

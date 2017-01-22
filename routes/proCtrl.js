@@ -87,7 +87,6 @@ router.route('/getPromotions').get(function(req, res){
 	})
 })
 
-
 router.route('/lastArrivals').get(function(req, res){
 	Product.find({}).sort({'created_at': -1}).limit(3).exec(function(err, lastArrivals){
 		if(err){
@@ -96,7 +95,6 @@ router.route('/lastArrivals').get(function(req, res){
 		return res.status(200).send(lastArrivals)
 	})
 })
-
 
 router.route('/starters').get(function(req, res){
 

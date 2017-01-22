@@ -7,7 +7,8 @@
 
 	.slides-box
 		width: 400%
-		transition: 1s all
+		transition: 1s margin-left
+
 	.main-slide
 		min-height: 95vh
 		box-sizing: border-box
@@ -89,7 +90,7 @@
 
 		blockquote
 			border-left: 4px solid lighten($main-color, 10%)
-			.quote
+			p
 				color: $white-color
 				font-weight: 700
 				letter-spacing: 2.5px
@@ -199,7 +200,7 @@
 
 
 
-//new Arrivals section
+//new Arrivals, movie starters, best promotions section
 
 .items
 	display: flex
@@ -218,7 +219,7 @@
 		align-items: center		
 		flex-wrap: wrap
 
-		figure
+		.start-item, .promo-item, .arr-item
 			box-sizing: border-box
 			position: relative
 			margin-right: 60px
@@ -226,6 +227,10 @@
 			border-radius: 20px
 			transition: 1s all
 			color: $white-color
+			opacity: 0
+
+			&.is-showing
+				opacity: 1
 
 			img
 				width: 300px
@@ -291,7 +296,7 @@
 		color: darken($light-gray, 50%)
 		transition: all 1s
 
-		&.appear
+		&.is-showing
 			opacity: 1
 			right: 0
 
@@ -349,7 +354,7 @@
 
 	.items
 		.items-box
-			figure
+			.start-item, .promo-item, .arr-item
 				.price
 					font-size: 25px
 					top: 15px
@@ -381,7 +386,7 @@
 
 		.buyer-slide
 			blockquote
-				.quote
+				p
 					font-size: 25px
 
 	.profesor-box
@@ -396,7 +401,7 @@
 
 	.items
 		.items-box
-			figure
+			.start-item, .promo-item, .arr-item
 				margin: 10px auto
 				padding: 0
 				width: 100%

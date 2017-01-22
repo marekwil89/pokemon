@@ -8,14 +8,7 @@ section, header {
   margin-top: 50px; }
 
 .wrapper {
-  min-height: 100vh;
-  position: relative; }
-  .wrapper .error {
-    border: 1px solid #660000;
-    position: absolute;
-    right: 30px;
-    top: 60px;
-    color: #660000; }
+  min-height: 100vh; }
 
 .cart-box {
   min-height: 95vh;
@@ -56,8 +49,8 @@ section, header {
   position: relative; }
   .header-box .slides-box {
     width: 400%;
-    -webkit-transition: 1s all;
-            transition: 1s all; }
+    -webkit-transition: 1s margin-left;
+            transition: 1s margin-left; }
   .header-box .main-slide {
     min-height: 95vh;
     box-sizing: border-box;
@@ -155,7 +148,7 @@ section, header {
       margin-bottom: 10px; }
     .header-box .buyer-slide blockquote {
       border-left: 4px solid #e47365; }
-      .header-box .buyer-slide blockquote .quote {
+      .header-box .buyer-slide blockquote p {
         color: #FFFFFF;
         font-weight: 700;
         letter-spacing: 2.5px;
@@ -297,7 +290,7 @@ section, header {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap; }
-    .items .items-box figure {
+    .items .items-box .start-item, .items .items-box .promo-item, .items .items-box .arr-item {
       box-sizing: border-box;
       position: relative;
       margin-right: 60px;
@@ -305,17 +298,20 @@ section, header {
       border-radius: 20px;
       -webkit-transition: 1s all;
               transition: 1s all;
-      color: #FFFFFF; }
-      .items .items-box figure img {
+      color: #FFFFFF;
+      opacity: 0; }
+      .items .items-box .start-item.is-showing, .items .items-box .promo-item.is-showing, .items .items-box .arr-item.is-showing {
+        opacity: 1; }
+      .items .items-box .start-item img, .items .items-box .promo-item img, .items .items-box .arr-item img {
         width: 300px; }
-      .items .items-box figure .price {
+      .items .items-box .start-item .price, .items .items-box .promo-item .price, .items .items-box .arr-item .price {
         border: 1px solid #000000;
         z-index: 2;
         border-radius: 50%;
         padding: 7px;
         position: absolute;
         color: #FFFFFF; }
-        .items .items-box figure .price.standard {
+        .items .items-box .start-item .price.standard, .items .items-box .promo-item .price.standard, .items .items-box .arr-item .price.standard {
           background-color: #dd4b39;
           -webkit-transform: rotate(15deg);
               -ms-transform: rotate(15deg);
@@ -323,10 +319,10 @@ section, header {
           top: -15px;
           right: -15px;
           font-size: 35px; }
-        .items .items-box figure .price.line {
+        .items .items-box .start-item .price.line, .items .items-box .promo-item .price.line, .items .items-box .arr-item .price.line {
           background-color: rgba(59, 89, 152, 0.4);
           text-decoration: line-through; }
-        .items .items-box figure .price.new {
+        .items .items-box .start-item .price.new, .items .items-box .promo-item .price.new, .items .items-box .arr-item .price.new {
           background-color: #dd4b39;
           -webkit-transform: rotate(20deg);
               -ms-transform: rotate(20deg);
@@ -334,12 +330,12 @@ section, header {
           top: 15px;
           right: 10px;
           font-size: 45px; }
-      .items .items-box figure figcaption {
+      .items .items-box .start-item figcaption, .items .items-box .promo-item figcaption, .items .items-box .arr-item figcaption {
         font-size: 25px;
         font-weight: 700;
         text-align: center;
         color: #5e5e5e; }
-      .items .items-box figure:hover {
+      .items .items-box .start-item:hover, .items .items-box .promo-item:hover, .items .items-box .arr-item:hover {
         background-color: #dddddd; }
 
 .about-box {
@@ -382,7 +378,7 @@ section, header {
     color: #5e5e5e;
     -webkit-transition: all 1s;
             transition: all 1s; }
-    .about-box .info-box.appear {
+    .about-box .info-box.is-showing {
       opacity: 1;
       right: 0; }
     .about-box .info-box h2 {
@@ -421,7 +417,7 @@ section, header {
   .header-box .main-slide h1 {
     font-size: 45px; }
 
-  .items .items-box figure .price {
+  .items .items-box .start-item .price, .items .items-box .promo-item .price, .items .items-box .arr-item .price {
     font-size: 25px;
     top: 15px;
     right: 15px; }
@@ -441,7 +437,7 @@ section, header {
     text-align: justify;
     font-size: 15px;
     width: 300px; }
-  .header-box .buyer-slide blockquote .quote {
+  .header-box .buyer-slide blockquote p {
     font-size: 25px; }
 
   .profesor-box {
@@ -451,17 +447,17 @@ section, header {
       .profesor-box .bubble blockquote .quote {
         font-size: 25px; }
 
-  .items .items-box figure {
+  .items .items-box .start-item, .items .items-box .promo-item, .items .items-box .arr-item {
     margin: 10px auto;
     padding: 0;
     width: 100%; }
-    .items .items-box figure .price.standard {
+    .items .items-box .start-item .price.standard, .items .items-box .promo-item .price.standard, .items .items-box .arr-item .price.standard {
       top: 0px;
       right: 15px; }
-    .items .items-box figure .price.new {
+    .items .items-box .start-item .price.new, .items .items-box .promo-item .price.new, .items .items-box .arr-item .price.new {
       top: 35px;
       right: 25px; }
-    .items .items-box figure img {
+    .items .items-box .start-item img, .items .items-box .promo-item img, .items .items-box .arr-item img {
       width: 100%;
       margin: 0 auto; }
 
